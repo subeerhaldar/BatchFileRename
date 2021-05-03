@@ -31,6 +31,8 @@ namespace BatchFileRename
                 // Comment below line(if condition) when undo filename is needed
                 if (!oldFilename.Contains(token))
                     File.Move(Path.Combine(folderPath, oldFilename), Path.Combine(folderPath, newFilename));
+
+                Console.WriteLine($"{folderPath} --> {newFilename}");
             }
 
             Console.WriteLine("Done");
